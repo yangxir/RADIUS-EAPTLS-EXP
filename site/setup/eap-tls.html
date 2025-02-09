@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://yangxir.github.io/RADIUS-EAPTLS-EXP/jp/index.html">
+        <link rel="canonical" href="https://yangxir.github.io/RADIUS-EAPTLS-EXP/setup/eap-tls.html">
       
       
-        <link rel="prev" href="../en/setup/eap-tls.html">
+        <link rel="prev" href="../index.html">
       
       
-        <link rel="next" href="setup/eap-tls.html">
+        <link rel="next" href="proxy.html">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>ホーム - RADIUS EAP-TLS 实验记录</title>
+        <title>第一阶段：EAP-TLS 认证 - RADIUS EAP-TLS 实验记录</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#radius-eap-tls" class="md-skip">
+        <a href="#eap-tls-radius-server-on-ubuntu" class="md-skip">
           跳转至
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ホーム
+              第一阶段：EAP-TLS 认证
             
           </span>
         </div>
@@ -133,7 +133,7 @@
           </li>
         
           <li class="md-select__item">
-            <a href="./" hreflang="ja" class="md-select__link">
+            <a href="../jp/" hreflang="ja" class="md-select__link">
               日本語
             </a>
           </li>
@@ -228,11 +228,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../setup/eap-tls.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="eap-tls.html" class="md-tabs__link">
           
   
   实验记录
@@ -298,13 +300,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="index.html" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../jp/index.html" class="md-tabs__link">
           
   
   日本語
@@ -385,23 +385,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -413,7 +418,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             实验记录
@@ -424,10 +429,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../setup/eap-tls.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    第一阶段：EAP-TLS 认证
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="eap-tls.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -437,6 +463,239 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 实验环境
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-freeradius" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 1. 安装 FreeRADIUS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-freeradius" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 2. 配置 FreeRADIUS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 2. 配置 FreeRADIUS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clientsconf" class="md-nav__link">
+    <span class="md-ellipsis">
+      修改 clients.conf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eap" class="md-nav__link">
+    <span class="md-ellipsis">
+      启用 EAP 模块
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      �� 3. 生成证书
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="�� 3. 生成证书">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ca" class="md-nav__link">
+    <span class="md-ellipsis">
+      生成 CA 证书
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      生成服务器证书
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      生成客户端证书
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pkcs12" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建 PKCS#12 客户端证书（用于手机导入）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-freeradius" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 4. 启动 FreeRADIUS 并测试
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 5. 连接无线客户端
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 5. 连接无线客户端">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      准备客户端证书
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 6. 配置路由器
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 7. 常见问题与解决方案
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 7. 常见问题与解决方案">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eap-tls" class="md-nav__link">
+    <span class="md-ellipsis">
+      EAP-TLS 认证失败
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freeradius" class="md-nav__link">
+    <span class="md-ellipsis">
+      FreeRADIUS 无法启动
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      证书过期
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      📜 License
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 参考资料
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      📩 联系方式
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -449,7 +708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/proxy.html" class="md-nav__link">
+      <a href="proxy.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -698,28 +957,23 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -731,7 +985,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             日本語
@@ -742,31 +996,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    ホーム
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../jp/index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -776,35 +1009,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      📌 実験の段階
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -856,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="setup/eap-tls.html" class="md-nav__link">
+      <a href="../jp/setup/eap-tls.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -886,7 +1090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="faq.md" class="md-nav__link">
+      <a href="../jp/faq.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -908,7 +1112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="about.md" class="md-nav__link">
+      <a href="../jp/about.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -959,7 +1163,211 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 実験の段階
+      🚀 实验环境
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-freeradius" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 1. 安装 FreeRADIUS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-freeradius" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 2. 配置 FreeRADIUS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 2. 配置 FreeRADIUS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clientsconf" class="md-nav__link">
+    <span class="md-ellipsis">
+      修改 clients.conf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eap" class="md-nav__link">
+    <span class="md-ellipsis">
+      启用 EAP 模块
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      �� 3. 生成证书
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="�� 3. 生成证书">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ca" class="md-nav__link">
+    <span class="md-ellipsis">
+      生成 CA 证书
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      生成服务器证书
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      生成客户端证书
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pkcs12" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建 PKCS#12 客户端证书（用于手机导入）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-freeradius" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 4. 启动 FreeRADIUS 并测试
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 5. 连接无线客户端
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 5. 连接无线客户端">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      准备客户端证书
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 6. 配置路由器
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 7. 常见问题与解决方案
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 7. 常见问题与解决方案">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eap-tls" class="md-nav__link">
+    <span class="md-ellipsis">
+      EAP-TLS 认证失败
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freeradius" class="md-nav__link">
+    <span class="md-ellipsis">
+      FreeRADIUS 无法启动
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      证书过期
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      📜 License
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 参考资料
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      📩 联系方式
     </span>
   </a>
   
@@ -984,15 +1392,160 @@
   
 
 
-<h1 id="radius-eap-tls">RADIUS EAP-TLS 実験ログへようこそ</h1>
-<p>本プロジェクトでは、<strong>FreeRADIUS を用いた EAP-TLS 認証の実験</strong> を記録しています。</p>
-<h2 id="_1">📌 実験の段階</h2>
-<p>1️⃣ <strong>第1段階</strong>：EAP-TLS 認証のセットアップ<br />
-2️⃣ <strong>第2段階</strong>：プロキシサーバーの追加<br />
-3️⃣ <strong>第3段階</strong>：追加予定<br />
-4️⃣ <strong>第4段階</strong>：追加予定  </p>
+<h1 id="eap-tls-radius-server-on-ubuntu">EAP-TLS RADIUS Server on Ubuntu</h1>
+<p>本项目提供 Ubuntu 环境下 <strong>EAP-TLS 认证的 FreeRADIUS 服务器</strong> 搭建教程，包括：
+- <strong>FreeRADIUS 安装</strong>
+- <strong>EAP-TLS 证书生成</strong>
+- <strong>RADIUS 服务器配置</strong>
+- <strong>终端设备连接</strong>
+- <strong>调试与排错</strong></p>
 <hr />
-<p>💡 <strong>詳細については、<a href="https://github.com/yangxir">GitHub リポジトリ</a> を参照してください</strong></p>
+<h2 id="_1">🚀 实验环境</h2>
+<ol>
+<li><strong>Ubuntu 虚拟机</strong>（作为 RADIUS 服务器）。</li>
+<li><strong>路由器</strong>（作为无线接入点）。</li>
+<li><strong>红米 K50 手机</strong>（作为无线客户端）。</li>
+<li><strong>无线网卡</strong>（用于调试或抓包）。</li>
+</ol>
+<hr />
+<hr />
+<h2 id="1-freeradius">📌 1. 安装 FreeRADIUS</h2>
+<pre><code class="language-sh">sudo apt update &amp;&amp; sudo apt install freeradius freeradius-utils -y
+</code></pre>
+<p>检查 RADIUS 服务器是否正常运行：</p>
+<pre><code class="language-sh">sudo systemctl status freeradius
+</code></pre>
+<p>如果未启动：</p>
+<pre><code class="language-sh">sudo systemctl enable --now freeradius
+</code></pre>
+<hr />
+<h2 id="2-freeradius">📌 2. 配置 FreeRADIUS</h2>
+<h3 id="clientsconf"><strong>修改 <code>clients.conf</code></strong></h3>
+<pre><code class="language-sh">sudo nano /etc/freeradius/3.0/clients.conf
+</code></pre>
+<p>添加以下内容（⚠️ <strong>请替换 <code>192.168.51.2</code> 为你的路由器 IP</strong> ⚠️）：</p>
+<pre><code class="language-ini">client your_router {
+    ipaddr = 192.168.51.2  
+    secret = testing123  
+    shortname = router  
+}
+</code></pre>
+<h3 id="eap"><strong>启用 EAP 模块</strong></h3>
+<pre><code class="language-sh">sudo nano /etc/freeradius/3.0/mods-enabled/eap
+</code></pre>
+<p>确保以下内容正确：</p>
+<pre><code class="language-ini">eap {
+    default_eap_type = tls
+}
+
+tls-config tls-common {
+    private_key_file = /etc/freeradius/3.0/certs/server.key
+    certificate_file = /etc/freeradius/3.0/certs/server.crt
+    CA_file = /etc/freeradius/3.0/certs/ca.crt
+    dh_file = /etc/freeradius/3.0/certs/dh
+    random_file = /dev/urandom
+}
+
+</code></pre>
+<p>⚠️ <strong>因为我的证书都放在这，你需要换成你自己证书的位置！</strong></p>
+<hr />
+<h2 id="3">�� 3. 生成证书</h2>
+<p>创建证书目录（如果不存在）：</p>
+<pre><code class="language-sh">sudo mkdir -p /etc/freeradius/3.0/certs
+cd /etc/freeradius/3.0/certs
+</code></pre>
+<h3 id="ca"><strong>生成 CA 证书</strong></h3>
+<pre><code class="language-sh">sudo openssl genrsa -out ca.key 2048
+sudo openssl req -x509 -new -nodes -key ca.key -sha256 -days 365 -out ca.crt -subj &quot;/C=JP/ST=Miyagi/L=Sendai/O=Tohoku University/OU=Goto Lab/CN=CA&quot;
+</code></pre>
+<h3 id="_2"><strong>生成服务器证书</strong></h3>
+<pre><code class="language-sh">sudo openssl genrsa -out server.key 2048
+sudo openssl req -new -key server.key -out server.csr -subj &quot;/C=JP/ST=Miyagi/L=Sendai/O=Tohoku University/OU=Goto Lab/CN=radius-server.local&quot;
+sudo openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out server.crt -days 365 -sha256
+</code></pre>
+<h3 id="_3"><strong>生成客户端证书</strong></h3>
+<pre><code class="language-sh">sudo openssl genrsa -out client.key 2048
+sudo openssl req -new -key client.key -out client.csr -subj &quot;/C=JP/ST=Miyagi/L=Sendai/O=Tohoku University/OU=Goto Lab/CN=client&quot;
+sudo openssl x509 -req -in client.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out client.crt -days 365 -sha256
+</code></pre>
+<p>⚠️ <strong><em>注意：
+上面的命令中，"Tohoku University"、"Goto Lab" 等内容是我研究室的相关信息，你需要替换成你自己的单位或组织名称！</em></strong></p>
+<h3 id="pkcs12"><strong>创建 PKCS#12 客户端证书（用于手机导入）</strong></h3>
+<pre><code class="language-sh">sudo openssl pkcs12 -export -inkey client.key -in client.crt -certfile ca.crt -out client.p12
+</code></pre>
+<hr />
+<h2 id="4-freeradius">📌 4. 启动 FreeRADIUS 并测试</h2>
+<pre><code class="language-sh">sudo systemctl restart freeradius
+sudo journalctl -u freeradius -f
+</code></pre>
+<p>使用 <code>radtest</code> 进行认证测试：</p>
+<pre><code class="language-sh">radtest user password 127.0.0.1 0 testing123
+</code></pre>
+<p>如果成功，应该返回 <code>Access-Accept</code>。</p>
+<hr />
+<h2 id="5">📌 5. 连接无线客户端</h2>
+<h3 id="_4"><strong>准备客户端证书</strong></h3>
+<ol>
+<li>复制 <code>client.p12</code> 和 <code>ca.crt</code> 到手机（可以使用 Google Drive）。</li>
+<li>在 Android / iPhone 上导入证书：</li>
+<li>进入 <strong>Wi-Fi 高级设置</strong>，选择 <strong>EAP-TLS</strong> 认证。</li>
+<li>选择 <code>client.p12</code> 作为客户端证书。</li>
+<li>选择 <code>ca.crt</code> 作为 CA 证书。</li>
+</ol>
+<hr />
+<h2 id="6">📌 6. 配置路由器</h2>
+<ol>
+<li>进入路由器管理界面。</li>
+<li>在 <strong>无线安全</strong> 或 <strong>高级设置</strong> 中，启用 <strong>WPA2-Enterprise</strong>（EAP-TLS）。</li>
+<li>配置 RADIUS 服务器地址：</li>
+<li><strong>RADIUS Server IP</strong>: <code>你的 RADIUS 服务器 IP</code></li>
+<li><strong>Port</strong>: <code>1812</code></li>
+<li><strong>Secret</strong>: <code>testing123</code> （此密码应与 <code>clients.conf</code> 文件中的 <code>secret</code> 字段一致）</li>
+</ol>
+<p>📌 <strong>确保 <code>clients.conf</code> 文件中的 RADIUS 共享密钥一致</strong></p>
+<pre><code class="language-ini">client your_router {
+    ipaddr = 192.168.51.2  # 替换为你的路由器 IP
+    secret = testing123    # RADIUS 共享密钥
+    shortname = router     # 简称，便于识别
+}
+</code></pre>
+<p>⚠️ <strong><em>注意：如果 clients.conf 中的 secret 与路由器配置的不匹配，RADIUS 认证将失败！</em></strong></p>
+<hr />
+<h2 id="7">🔧 7. 常见问题与解决方案</h2>
+<h3 id="eap-tls"><strong>EAP-TLS 认证失败</strong></h3>
+<pre><code class="language-sh">TLS Alert: unknown CA
+</code></pre>
+<p><strong>解决方法</strong>：
+- 确保客户端已导入 <code>ca.crt</code>。
+- 使用 <code>openssl verify -CAfile ca.crt server.crt</code> 进行验证。</p>
+<h3 id="freeradius"><strong>FreeRADIUS 无法启动</strong></h3>
+<pre><code class="language-sh">Failed to start freeradius.service
+</code></pre>
+<p><strong>解决方法</strong>：</p>
+<pre><code class="language-sh">sudo systemctl restart freeradius
+sudo journalctl -u freeradius -f
+</code></pre>
+<h3 id="_5"><strong>证书过期</strong></h3>
+<p>如果证书无效，清理后重新生成：</p>
+<pre><code class="language-sh">sudo rm /etc/freeradius/3.0/certs/*.crt
+sudo rm /etc/freeradius/3.0/certs/*.key
+sudo rm /etc/freeradius/3.0/certs/*.csr
+sudo rm /etc/freeradius/3.0/certs/*.srl
+bash scripts/generate_certs.sh
+</code></pre>
+<hr />
+<h2 id="license">📜 License</h2>
+<p>本项目基于 <strong>MIT License</strong>，欢迎自由使用和修改。如需引用或二次开发，请注明来源。</p>
+<hr />
+<h2 id="_6">📚 参考资料</h2>
+<p>本项目的内容基于以下资源：
+- <strong>FreeRADIUS 官方网站</strong>: <a href="https://www.freeradius.org/">https://www.freeradius.org/</a>
+- <strong>NII 学术认证推进室 - Eduroam 与 RADIUS 相关文档</strong>: <a href="https://meatwiki.nii.ac.jp/confluence/pages/viewpage.action?pageId=94340973">NII MeatWiki</a></p>
+<hr />
+<h2 id="_7">📩 联系方式</h2>
+<p>如果你有任何问题或建议，可以提交 Issue 反馈，或者访问我的 GitHub 主页：</p>
+<p>🔗 <a href="https://github.com/yangxir">GitHub 主页</a>  </p>
+<p>如果觉得本项目有帮助，欢迎 <strong>Star ⭐ 支持</strong>！</p>
 
 
 

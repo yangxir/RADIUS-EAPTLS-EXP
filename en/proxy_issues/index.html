@@ -13,6 +13,10 @@
       
       
       
+        <link rel="prev" href="../proxy/">
+      
+      
+        <link rel="next" href="../../zh/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +24,7 @@
     
     
       
-        <title>Faq - 📡 EAP-TLS RADIUS Experiments</title>
+        <title>Proxy Issues - 📡 EAP-TLS RADIUS Experiments</title>
       
     
     
@@ -79,6 +83,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#radius-proxy-server-authentication-guide" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -109,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Faq
+              Proxy Issues
             
           </span>
         </div>
@@ -207,11 +216,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../en/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -251,7 +262,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../" class="md-tabs__link">
+        <a href="../../ja/" class="md-tabs__link">
           
   
     
@@ -336,6 +347,8 @@
       
   
   
+    
+  
   
   
     
@@ -352,23 +365,24 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../en/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -380,13 +394,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             English
@@ -402,7 +416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../en/proxy/" class="md-nav__link">
+      <a href="../proxy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -421,10 +435,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../en/proxy_issues/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Proxy Issues
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -434,6 +469,233 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-role-of-the-proxy-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 1. Role of the Proxy Server
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 1. Role of the Proxy Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-is-a-proxy-server-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Why is a Proxy Server Needed?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-proxy-server-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      📡 2. Proxy Server Workflow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-proxy-server-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ 3. Proxy Server Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ 3. Proxy Server Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-device-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      📍 3.1 Device Environment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-ensure-proxy-server-can-connect-to-radius-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      📍 3.2 Ensure Proxy Server Can Connect to RADIUS Server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-configure-proxy-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      📍 3.3 Configure Proxy Server
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📍 3.3 Configure Proxy Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-modify-proxyconf" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 1. Modify proxy.conf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-configure-radius-server-to-allow-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 2. Configure RADIUS Server to Allow Proxy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-start-radius-server-and-proxy-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 3. Start RADIUS Server and Proxy Server
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-conducting-eap-tls-authentication-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠 4. Conducting EAP-TLS Authentication Test
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠 4. Conducting EAP-TLS Authentication Test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-configure-eap-tls-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 4.1 Configure EAP-TLS Client
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-run-eap-tls-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      �� 4.2 Run EAP-TLS Authentication
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-common-issues-and-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 5. Common Issues and Solutions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ 5. Common Issues and Solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-proxy-server-does-not-forward-requests-correctly" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔴 1. Proxy Server Does Not Forward Requests Correctly
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔴 1. Proxy Server Does Not Forward Requests Correctly">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symptoms" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Symptoms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Solution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-future-optimization-directions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 6. Future Optimization Directions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -596,7 +858,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../ja/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -630,7 +892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../proxy/" class="md-nav__link">
+      <a href="../../ja/proxy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -652,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../proxy_issues/" class="md-nav__link">
+      <a href="../../ja/proxy_issues/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -690,9 +952,150 @@
 
 
 
-  <h1>Faq</h1>
+<h1 id="radius-proxy-server-authentication-guide">📡 RADIUS Proxy Server Authentication Guide<a class="headerlink" href="#radius-proxy-server-authentication-guide" title="Permanent link">&para;</a></h1>
+<h2 id="1-role-of-the-proxy-server">📌 1. Role of the Proxy Server<a class="headerlink" href="#1-role-of-the-proxy-server" title="Permanent link">&para;</a></h2>
+<h3 id="why-is-a-proxy-server-needed">🔹 Why is a Proxy Server Needed?<a class="headerlink" href="#why-is-a-proxy-server-needed" title="Permanent link">&para;</a></h3>
+<p>In the RADIUS authentication architecture, <strong>Proxy Server</strong> is mainly used to <strong>forward</strong> authentication requests rather than processing authentication directly. Its core role is to ensure that client authentication requests can reach the final RADIUS server in a <strong>distributed environment</strong>.</p>
+<p>Proxy Server is <strong>essential</strong> in the following scenarios:
+- <strong>Enterprise WiFi authentication</strong> (e.g., Eduroam multi-site roaming)
+- <strong>Multi-level RADIUS authentication</strong> (e.g., ISP authentication systems)
+- <strong>Cross-national/cross-regional WiFi authentication</strong> (authentication forwarding between RADIUS servers in different countries)</p>
+<hr />
+<h2 id="2-proxy-server-workflow">📡 2. Proxy Server Workflow<a class="headerlink" href="#2-proxy-server-workflow" title="Permanent link">&para;</a></h2>
+<p>1️⃣ <strong>Client</strong> sends an <strong>EAP-TLS</strong> authentication request<br />
+2️⃣ <strong>Proxy Server</strong> receives the request and <strong>forwards</strong> it to the final RADIUS Server<br />
+3️⃣ <strong>RADIUS Server</strong> processes the authentication request and returns the result<br />
+4️⃣ <strong>Proxy Server</strong> sends the result back to the client<br />
+5️⃣ <strong>Client successfully connects to WiFi</strong> 🎉  </p>
+<hr />
+<h2 id="3-proxy-server-configuration">⚙️ 3. Proxy Server Configuration<a class="headerlink" href="#3-proxy-server-configuration" title="Permanent link">&para;</a></h2>
+<h3 id="31-device-environment">📍 3.1 Device Environment<a class="headerlink" href="#31-device-environment" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>Role</th>
+<th>IP Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MiniPC-1</strong></td>
+<td>Authentication Client (EAP-TLS)</td>
+<td><code>192.168.8.220</code></td>
+</tr>
+<tr>
+<td><strong>Router (GL-AXT1800-83b-5G)</strong></td>
+<td>Connects all devices, Proxy acts as RADIUS server</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>MiniPC-2</strong></td>
+<td>Proxy Server (Forwards RADIUS authentication requests)</td>
+<td><code>192.168.8.182</code></td>
+</tr>
+<tr>
+<td><strong>PC (RADIUS Server)</strong></td>
+<td>Authentication Server (FreeRADIUS 3.0.26)</td>
+<td><code>192.168.8.195</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="32-ensure-proxy-server-can-connect-to-radius-server">📍 3.2 Ensure Proxy Server Can Connect to RADIUS Server<a class="headerlink" href="#32-ensure-proxy-server-can-connect-to-radius-server" title="Permanent link">&para;</a></h3>
+<p><strong>Test UDP 1812 Port Connectivity</strong>
+<div class="highlight"><pre><span></span><code>nc<span class="w"> </span>-zvu<span class="w"> </span><span class="m">192</span>.168.8.195<span class="w"> </span><span class="m">1812</span>
+</code></pre></div>
+✅ <strong>UDP port 1812 is reachable</strong>, indicating Proxy Server can communicate with RADIUS Server.</p>
+<hr />
+<h3 id="33-configure-proxy-server">📍 3.3 Configure Proxy Server<a class="headerlink" href="#33-configure-proxy-server" title="Permanent link">&para;</a></h3>
+<h4 id="1-modify-proxyconf">🔹 1. Modify <code>proxy.conf</code><a class="headerlink" href="#1-modify-proxyconf" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="na">proxy_requests</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
 
-
+<span class="na">realm DEFAULT {</span>
+<span class="w">    </span><span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">radius</span>
+<span class="w">    </span><span class="na">authhost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">192.168.8.195:1812</span>
+<span class="w">    </span><span class="na">accthost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">192.168.8.195:1813</span>
+<span class="w">    </span><span class="na">secret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">shared_secret_key</span>
+<span class="na">}</span>
+</code></pre></div>
+✅ <strong>Ensure Proxy Server acts only as a "relay" and not a "local authentication" server</strong></p>
+<hr />
+<h4 id="2-configure-radius-server-to-allow-proxy">🔹 2. Configure RADIUS Server to Allow Proxy<a class="headerlink" href="#2-configure-radius-server-to-allow-proxy" title="Permanent link">&para;</a></h4>
+<p>Add Proxy Server to <code>clients.conf</code>:
+<div class="highlight"><pre><span></span><code><span class="na">client 192.168.8.182 {</span>
+<span class="w">    </span><span class="na">secret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">shared_secret_key</span>
+<span class="w">    </span><span class="na">shortname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">proxy</span>
+<span class="na">}</span>
+</code></pre></div>
+✅ <strong>Ensure the <code>secret</code> is consistent between Proxy Server and RADIUS Server to avoid errors</strong></p>
+<hr />
+<h4 id="3-start-radius-server-and-proxy-server">🔹 3. Start RADIUS Server and Proxy Server<a class="headerlink" href="#3-start-radius-server-and-proxy-server" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code>systemctl<span class="w"> </span>restart<span class="w"> </span>freeradius
+</code></pre></div>
+View logs:
+<div class="highlight"><pre><span></span><code>journalctl<span class="w"> </span>-u<span class="w"> </span>freeradius<span class="w"> </span>-f
+</code></pre></div>
+✅ <strong>Ensure services are running normally without errors</strong></p>
+<hr />
+<h2 id="4-conducting-eap-tls-authentication-test">🛠 4. Conducting EAP-TLS Authentication Test<a class="headerlink" href="#4-conducting-eap-tls-authentication-test" title="Permanent link">&para;</a></h2>
+<h3 id="41-configure-eap-tls-client">📌 4.1 Configure EAP-TLS Client<a class="headerlink" href="#41-configure-eap-tls-client" title="Permanent link">&para;</a></h3>
+<p>Create <code>eapol_test.conf</code>:
+<div class="highlight"><pre><span></span><code><span class="na">network</span><span class="o">=</span><span class="s">{</span>
+<span class="w">    </span><span class="na">ssid</span><span class="o">=</span><span class="s">&quot;GL-AXT1800-83b-5G&quot;</span>
+<span class="w">    </span><span class="na">key_mgmt</span><span class="o">=</span><span class="s">WPA-EAP</span>
+<span class="w">    </span><span class="na">eap</span><span class="o">=</span><span class="s">TLS</span>
+<span class="w">    </span><span class="na">identity</span><span class="o">=</span><span class="s">&quot;testuser&quot;</span>
+<span class="w">    </span><span class="na">anonymous_identity</span><span class="o">=</span><span class="s">&quot;testuser&quot;</span>
+<span class="w">    </span><span class="na">ca_cert</span><span class="o">=</span><span class="s">&quot;/home/user/ca.crt&quot;</span>
+<span class="w">    </span><span class="na">client_cert</span><span class="o">=</span><span class="s">&quot;/home/user/client.crt&quot;</span>
+<span class="w">    </span><span class="na">private_key</span><span class="o">=</span><span class="s">&quot;/home/user/client.key&quot;</span>
+<span class="w">    </span><span class="na">private_key_passwd</span><span class="o">=</span><span class="s">&quot;&quot;</span>
+<span class="na">}</span>
+</code></pre></div></p>
+<h3 id="42-run-eap-tls-authentication">�� 4.2 Run EAP-TLS Authentication<a class="headerlink" href="#42-run-eap-tls-authentication" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>eapol_test<span class="w"> </span>-c<span class="w"> </span>~/eapol_test.conf<span class="w"> </span>-s<span class="w"> </span>shared_secret_key<span class="w"> </span>-a<span class="w"> </span><span class="m">192</span>.168.8.182<span class="w"> </span>-p<span class="w"> </span><span class="m">1812</span>
+</code></pre></div>
+✅ <strong>Proxy Server forwards the request to RADIUS Server, completing authentication</strong></p>
+<hr />
+<h2 id="5-common-issues-and-solutions">✅ 5. Common Issues and Solutions<a class="headerlink" href="#5-common-issues-and-solutions" title="Permanent link">&para;</a></h2>
+<h3 id="1-proxy-server-does-not-forward-requests-correctly">🔴 1. Proxy Server Does Not Forward Requests Correctly<a class="headerlink" href="#1-proxy-server-does-not-forward-requests-correctly" title="Permanent link">&para;</a></h3>
+<h4 id="symptoms">❌ Symptoms<a class="headerlink" href="#symptoms" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Proxy Server <strong>does not forward EAP-TLS authentication requests</strong> but handles authentication <strong>locally</strong>.</li>
+<li><code>radiusd -X</code> logs do not show <strong>forwarded authentication requests</strong>.</li>
+</ul>
+<h4 id="solution">✅ Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>Enable proxy forwarding</strong>
+   <div class="highlight"><pre><span></span><code><span class="na">proxy_requests</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
+</code></pre></div></li>
+<li><strong>Ensure <code>proxy.conf</code> realm configuration is correct</strong>
+   <div class="highlight"><pre><span></span><code><span class="na">realm DEFAULT {</span>
+<span class="w">    </span><span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">radius</span>
+<span class="w">    </span><span class="na">authhost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">192.168.8.195:1812</span>
+<span class="w">    </span><span class="na">accthost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">192.168.8.195:1813</span>
+<span class="w">    </span><span class="na">secret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">shared_secret_key</span>
+<span class="na">}</span>
+</code></pre></div></li>
+<li><strong>Restart FreeRADIUS</strong>
+   <div class="highlight"><pre><span></span><code>systemctl<span class="w"> </span>restart<span class="w"> </span>freeradius
+</code></pre></div>
+✅ <strong>Successfully forwards EAP-TLS authentication requests to RADIUS Server!</strong> 🎉</li>
+</ol>
+<hr />
+<h2 id="6-future-optimization-directions">📌 6. Future Optimization Directions<a class="headerlink" href="#6-future-optimization-directions" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>🌍 Multi-level Proxy Authentication Testing</strong>: Attempt secondary forwarding of authentication requests</li>
+<li><strong>📊 Authentication Delay Optimization</strong>: Measure additional latency introduced by Proxy Server</li>
+<li><strong>🔐 Certificate Management Optimization</strong>: Simplify client certificate import process to ensure automatic trust of RADIUS CA  </li>
+</ul>
+<hr />
+<h2 id="references">📌 References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li>📖 <strong>FreeRADIUS Official Documentation</strong>: <a href="https://freeradius.org/">https://freeradius.org/</a></li>
+<li>📖 <strong>Eduroam Authentication Guide</strong>: <a href="https://meatwiki.nii.ac.jp/confluence/pages/viewpage.action?pageId=94340973">NII MeatWiki</a></li>
+</ul>
 
 
 

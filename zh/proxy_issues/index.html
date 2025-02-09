@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../proxy/">
       
       
-        <link rel="next" href="../proxy_issues/">
+        <link rel="next" href="../../ja/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>代理认证 - 📡 EAP-TLS RADIUS Experiments</title>
+        <title>代理问题 - 📡 EAP-TLS RADIUS Experiments</title>
       
     
     
@@ -83,6 +83,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#radius-proxy-server" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -113,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              代理认证
+              代理问题
             
           </span>
         </div>
@@ -522,17 +527,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../proxy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -542,7 +540,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -552,10 +549,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../proxy_issues/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    代理问题
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -565,6 +583,266 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 1. 代理服务器的作用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 1. 代理服务器的作用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proxy-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 为什么需要 Proxy Server？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-proxy-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      �� 2. Proxy Server 的工作流程
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ 3. 代理服务器配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ 3. 代理服务器配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      📍 3.1 设备环境
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-proxy-server-radius-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      📍 3.2 确保 Proxy Server 能连接到 RADIUS Server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-proxy-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      📍 3.3 配置 Proxy Server
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📍 3.3 配置 Proxy Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-proxyconf" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 1. 修改 proxy.conf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-radius-server-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 2. 配置 RADIUS Server，允许 Proxy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-radius-server-proxy-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 3. 启动 RADIUS Server 和 Proxy Server
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-eap-tls" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠 4. 进行 EAP-TLS 认证测试
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠 4. 进行 EAP-TLS 认证测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-eap-tls" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 4.1 配置 EAP-TLS 客户端
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-eap-tls" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 4.2 运行 EAP-TLS 认证
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 5. 遇到的问题与解决方案
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ 5. 遇到的问题与解决方案">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-proxy-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔴 1. Proxy Server 没有正确转发请求
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔴 1. Proxy Server 没有正确转发请求">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ 现象
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 解决方案
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      �� 2. 证书链错误
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="�� 2. 证书链错误">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ 现象
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 解决方案
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 6. 未来优化方向
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 参考资料
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -707,9 +985,176 @@
 
 
 
-  <h1>代理认证</h1>
+<h1 id="radius-proxy-server">📡 RADIUS Proxy Server 认证指南<a class="headerlink" href="#radius-proxy-server" title="Permanent link">&para;</a></h1>
+<h2 id="1">📌 1. 代理服务器的作用<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="proxy-server">🔹 为什么需要 Proxy Server？<a class="headerlink" href="#proxy-server" title="Permanent link">&para;</a></h3>
+<p>在 RADIUS 认证架构中，<strong>Proxy Server（代理服务器）</strong> 主要用于 <strong>转发</strong> 认证请求，而非直接处理认证。其核心作用是在 <strong>分布式环境</strong> 下，确保客户端的认证请求能够顺利到达最终的 RADIUS 服务器。</p>
+<p>在以下场景中，Proxy Server <strong>至关重要</strong>：
+- <strong>企业 WiFi 认证</strong>（如 Eduroam 等多站点漫游）
+- <strong>多级 RADIUS 认证</strong>（如 ISP 认证系统）
+- <strong>跨国/跨区域 WiFi 认证</strong>（不同国家 RADIUS 服务器间的认证转发）</p>
+<hr />
+<h2 id="2-proxy-server">�� 2. Proxy Server 的工作流程<a class="headerlink" href="#2-proxy-server" title="Permanent link">&para;</a></h2>
+<p>1️⃣ <strong>客户端</strong> 发送 <strong>EAP-TLS</strong> 认证请求<br />
+2️⃣ <strong>Proxy Server</strong> 接收请求，并<strong>转发</strong>至最终的 RADIUS Server<br />
+3️⃣ <strong>RADIUS Server</strong> 处理认证请求，并返回认证结果<br />
+4️⃣ <strong>Proxy Server</strong> 将结果返回给客户端<br />
+5️⃣ <strong>客户端成功接入 WiFi</strong> 🎉  </p>
+<hr />
+<h2 id="3">⚙️ 3. 代理服务器配置<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h3 id="31">📍 3.1 设备环境<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>设备</th>
+<th>角色</th>
+<th>IP 地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MiniPC-1</strong></td>
+<td>认证客户端 (EAP-TLS)</td>
+<td><code>192.168.8.220</code></td>
+</tr>
+<tr>
+<td><strong>Router (GL-AXT1800-83b-5G)</strong></td>
+<td>连接所有设备，Proxy 作为 RADIUS 服务器</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>MiniPC-2</strong></td>
+<td>Proxy Server (转发 RADIUS 认证请求)</td>
+<td><code>192.168.8.182</code></td>
+</tr>
+<tr>
+<td><strong>PC (RADIUS Server)</strong></td>
+<td>认证服务器 (FreeRADIUS 3.0.26)</td>
+<td><code>192.168.8.195</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="32-proxy-server-radius-server">📍 3.2 确保 Proxy Server 能连接到 RADIUS Server<a class="headerlink" href="#32-proxy-server-radius-server" title="Permanent link">&para;</a></h3>
+<p><strong>测试 UDP 1812 端口连通性</strong>
+<div class="highlight"><pre><span></span><code>nc<span class="w"> </span>-zvu<span class="w"> </span><span class="m">192</span>.168.8.195<span class="w"> </span><span class="m">1812</span>
+</code></pre></div>
+✅ <strong>UDP 端口 1812 可达</strong>，表示 Proxy Server 可以与 RADIUS Server 通信。</p>
+<hr />
+<h3 id="33-proxy-server">📍 3.3 配置 Proxy Server<a class="headerlink" href="#33-proxy-server" title="Permanent link">&para;</a></h3>
+<h4 id="1-proxyconf">🔹 1. 修改 <code>proxy.conf</code><a class="headerlink" href="#1-proxyconf" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="na">proxy_requests</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
 
-
+<span class="na">realm DEFAULT {</span>
+<span class="w">    </span><span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">radius</span>
+<span class="w">    </span><span class="na">authhost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">192.168.8.195:1812</span>
+<span class="w">    </span><span class="na">accthost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">192.168.8.195:1813</span>
+<span class="w">    </span><span class="na">secret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">shared_secret_key</span>
+<span class="na">}</span>
+</code></pre></div>
+✅ <strong>确保 Proxy Server 仅作为 "中继"，而非 "本地认证" 服务器</strong></p>
+<hr />
+<h4 id="2-radius-server-proxy">🔹 2. 配置 RADIUS Server，允许 Proxy<a class="headerlink" href="#2-radius-server-proxy" title="Permanent link">&para;</a></h4>
+<p>在 <code>clients.conf</code> 添加 Proxy Server：
+<div class="highlight"><pre><span></span><code><span class="na">client 192.168.8.182 {</span>
+<span class="w">    </span><span class="na">secret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">shared_secret_key</span>
+<span class="w">    </span><span class="na">shortname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">proxy</span>
+<span class="na">}</span>
+</code></pre></div>
+✅ <strong>确保 Proxy Server 和 RADIUS Server 的 <code>secret</code> 一致，否则会报错</strong></p>
+<hr />
+<h4 id="3-radius-server-proxy-server">🔹 3. 启动 RADIUS Server 和 Proxy Server<a class="headerlink" href="#3-radius-server-proxy-server" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code>systemctl<span class="w"> </span>restart<span class="w"> </span>freeradius
+</code></pre></div>
+查看日志：
+<div class="highlight"><pre><span></span><code>journalctl<span class="w"> </span>-u<span class="w"> </span>freeradius<span class="w"> </span>-f
+</code></pre></div>
+✅ <strong>确保服务正常运行，无错误信息</strong></p>
+<hr />
+<h2 id="4-eap-tls">🛠 4. 进行 EAP-TLS 认证测试<a class="headerlink" href="#4-eap-tls" title="Permanent link">&para;</a></h2>
+<h3 id="41-eap-tls">📌 4.1 配置 EAP-TLS 客户端<a class="headerlink" href="#41-eap-tls" title="Permanent link">&para;</a></h3>
+<p>创建 <code>eapol_test.conf</code>：
+<div class="highlight"><pre><span></span><code><span class="na">network</span><span class="o">=</span><span class="s">{</span>
+<span class="w">    </span><span class="na">ssid</span><span class="o">=</span><span class="s">&quot;GL-AXT1800-83b-5G&quot;</span>
+<span class="w">    </span><span class="na">key_mgmt</span><span class="o">=</span><span class="s">WPA-EAP</span>
+<span class="w">    </span><span class="na">eap</span><span class="o">=</span><span class="s">TLS</span>
+<span class="w">    </span><span class="na">identity</span><span class="o">=</span><span class="s">&quot;testuser&quot;</span>
+<span class="w">    </span><span class="na">anonymous_identity</span><span class="o">=</span><span class="s">&quot;testuser&quot;</span>
+<span class="w">    </span><span class="na">ca_cert</span><span class="o">=</span><span class="s">&quot;/home/user/ca.crt&quot;</span>
+<span class="w">    </span><span class="na">client_cert</span><span class="o">=</span><span class="s">&quot;/home/user/client.crt&quot;</span>
+<span class="w">    </span><span class="na">private_key</span><span class="o">=</span><span class="s">&quot;/home/user/client.key&quot;</span>
+<span class="w">    </span><span class="na">private_key_passwd</span><span class="o">=</span><span class="s">&quot;&quot;</span>
+<span class="na">}</span>
+</code></pre></div></p>
+<h3 id="42-eap-tls">📌 4.2 运行 EAP-TLS 认证<a class="headerlink" href="#42-eap-tls" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>eapol_test<span class="w"> </span>-c<span class="w"> </span>~/eapol_test.conf<span class="w"> </span>-s<span class="w"> </span>shared_secret_key<span class="w"> </span>-a<span class="w"> </span><span class="m">192</span>.168.8.182<span class="w"> </span>-p<span class="w"> </span><span class="m">1812</span>
+</code></pre></div>
+✅ <strong>Proxy Server 将请求转发到 RADIUS Server，最终完成认证</strong></p>
+<hr />
+<h2 id="5">✅ 5. 遇到的问题与解决方案<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<h3 id="1-proxy-server">🔴 1. Proxy Server 没有正确转发请求<a class="headerlink" href="#1-proxy-server" title="Permanent link">&para;</a></h3>
+<h4 id="_1">❌ 现象<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Proxy Server <strong>未正确转发 EAP-TLS 认证请求</strong>，而是<strong>本地处理</strong>认证。</li>
+<li><code>radiusd -X</code> 日志中无 <strong>认证请求发送</strong> 记录。</li>
+</ul>
+<h4 id="_2">✅ 解决方案<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>启用代理转发</strong>
+   <div class="highlight"><pre><span></span><code><span class="na">proxy_requests</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
+</code></pre></div></li>
+<li><strong>确保 <code>proxy.conf</code> 里 <code>realm</code> 配置正确</strong>
+   <div class="highlight"><pre><span></span><code><span class="na">realm DEFAULT {</span>
+<span class="w">    </span><span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">radius</span>
+<span class="w">    </span><span class="na">authhost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">192.168.8.195:1812</span>
+<span class="w">    </span><span class="na">accthost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">192.168.8.195:1813</span>
+<span class="w">    </span><span class="na">secret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">shared_secret_key</span>
+<span class="w">    </span><span class="na">auth_pool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">my_auth_failover</span><span class="w">  </span><span class="c1">#换成自己的</span>
+<span class="na">}</span>
+</code></pre></div></li>
+<li><strong>重启 FreeRADIUS</strong>
+   <div class="highlight"><pre><span></span><code>systemctl<span class="w"> </span>restart<span class="w"> </span>freeradius
+</code></pre></div>
+✅ <strong>成功转发 EAP-TLS 认证请求至 RADIUS Server！</strong> 🎉</li>
+</ol>
+<hr />
+<h3 id="2">�� 2. 证书链错误<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<h4 id="_3">❌ 现象<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>eapol_test</code> 认证失败，日志显示：
+  <div class="highlight"><pre><span></span><code>Certificate chain - 1 cert(s) untrusted
+</code></pre></div></li>
+<li>RADIUS Server 端日志：
+  <div class="highlight"><pre><span></span><code>TLS Alert read: warning: unknown CA
+</code></pre></div></li>
+</ul>
+<h4 id="_4">✅ 解决方案<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>确保 RADIUS Server <code>eap.conf</code> 配置正确</strong>
+   <div class="highlight"><pre><span></span><code><span class="na">tls-config tls-common {</span>
+<span class="w">    </span><span class="na">private_key_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/etc/freeradius/3.0/certs/server.key</span>
+<span class="w">    </span><span class="na">certificate_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/etc/freeradius/3.0/certs/server.pem</span>
+<span class="w">    </span><span class="na">ca_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/etc/freeradius/3.0/certs/ca.pem</span>
+<span class="na">}</span>
+</code></pre></div></li>
+<li><strong>客户端导入 CA 证书</strong>
+   <div class="highlight"><pre><span></span><code>scp<span class="w"> </span>root@192.168.8.195:/etc/freeradius/3.0/certs/ca.crt<span class="w"> </span>~/Desktop/
+</code></pre></div>
+✅ <strong>证书匹配成功，认证通过！</strong> 🎉</li>
+</ol>
+<hr />
+<h2 id="6">📌 6. 未来优化方向<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>🌍 多级 Proxy 认证测试</strong>：尝试 Proxy Server <strong>二次转发</strong>认证请求</li>
+<li><strong>📊 认证延迟优化</strong>：测量 Proxy Server 转发的 <strong>额外延迟</strong></li>
+<li><strong>🔐 证书管理优化</strong>：简化客户端证书导入流程，确保设备能够自动信任 RADIUS CA  </li>
+</ul>
+<hr />
+<h2 id="_5">📌 参考资料<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li>📖 <strong>FreeRADIUS 官方文档</strong>: <a href="https://freeradius.org/">https://freeradius.org/</a></li>
+<li>📖 <strong>Eduroam 认证指南</strong>: <a href="https://meatwiki.nii.ac.jp/confluence/pages/viewpage.action?pageId=94340973">NII MeatWiki</a></li>
+</ul>
 
 
 

@@ -13,10 +13,6 @@
       
       
       
-        <link rel="prev" href="../">
-      
-      
-        <link rel="next" href="../proxy/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +20,7 @@
     
     
       
-        <title>⚙️ Setup - 📡 EAP-TLS RADIUS Experiments</title>
+        <title>EAP-TLS RADIUS Server on Ubuntu - 📡 EAP-TLS RADIUS Experiments</title>
       
     
     
@@ -118,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ⚙️ Setup
+              EAP-TLS RADIUS Server on Ubuntu
             
           </span>
         </div>
@@ -206,7 +202,7 @@
   
     
   
-  🏠 Home
+  Home
 
       </a>
     </li>
@@ -216,18 +212,16 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../" class="md-tabs__link">
           
   
     
   
-  🌍 English(home)
+  English
 
         </a>
       </li>
@@ -247,7 +241,7 @@
   
     
   
-  🇨🇳 中文(主页)
+  中文
 
         </a>
       </li>
@@ -267,7 +261,7 @@
   
     
   
-  🇯🇵 日本語(ホーム)
+  日本語
 
         </a>
       </li>
@@ -333,7 +327,7 @@
         
   
   <span class="md-ellipsis">
-    🏠 Home
+    Home
     
   </span>
   
@@ -346,8 +340,6 @@
       
       
   
-  
-    
   
   
   
@@ -362,24 +354,21 @@
       
         
       
-        
-      
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           
@@ -388,7 +377,7 @@
               
   
   <span class="md-ellipsis">
-    🌍 English(home)
+    English
     
   </span>
   
@@ -396,253 +385,19 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            🌍 English(home)
+            English
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    ⚙️ Setup
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    ⚙️ Setup
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#experiment-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Experiment Environment
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-installing-freeradius" class="md-nav__link">
-    <span class="md-ellipsis">
-      📌 1. Installing FreeRADIUS
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-configuring-freeradius" class="md-nav__link">
-    <span class="md-ellipsis">
-      📌 2. Configuring FreeRADIUS
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📌 2. Configuring FreeRADIUS">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#modify-clientsconf" class="md-nav__link">
-    <span class="md-ellipsis">
-      Modify clients.conf
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enable-eap-module" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enable EAP Module
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-generating-certificates" class="md-nav__link">
-    <span class="md-ellipsis">
-      📌 3. Generating Certificates
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📌 3. Generating Certificates">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generate-ca-certificate" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generate CA Certificate
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#generate-server-certificate" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generate Server Certificate
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#generate-client-certificate" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generate Client Certificate
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-pkcs12-client-certificate-for-mobile-import" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create PKCS#12 Client Certificate (For Mobile Import)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-start-freeradius-and-test" class="md-nav__link">
-    <span class="md-ellipsis">
-      �� 4. Start FreeRADIUS and Test
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-connect-wireless-clients" class="md-nav__link">
-    <span class="md-ellipsis">
-      📌 5. Connect Wireless Clients
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📌 5. Connect Wireless Clients">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#prepare-client-certificates" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prepare Client Certificates
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-configure-router" class="md-nav__link">
-    <span class="md-ellipsis">
-      📌 6. Configure Router
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    <span class="md-ellipsis">
-      📜 License
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      📚 References
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contact" class="md-nav__link">
-    <span class="md-ellipsis">
-      📩 Contact
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
               
             
               
@@ -656,7 +411,7 @@
         
   
   <span class="md-ellipsis">
-    🔐 Proxy Authentication
+    Proxy Authentication
     
   </span>
   
@@ -674,11 +429,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq/" class="md-nav__link">
+      <a href="../proxy_issues/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    ❓ FAQ
+    Proxy Issues
     
   </span>
   
@@ -707,8 +462,6 @@
       
         
           
-        
-      
         
       
         
@@ -738,7 +491,7 @@
               
   
   <span class="md-ellipsis">
-    🇨🇳 中文(主页)
+    中文
     
   </span>
   
@@ -755,32 +508,10 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            🇨🇳 中文(主页)
+            中文
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../zh/setup/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ⚙️ 设置 EAP-TLS
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -794,7 +525,7 @@
         
   
   <span class="md-ellipsis">
-    🔐 添加 Proxy
+    代理认证
     
   </span>
   
@@ -812,11 +543,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../zh/faq/" class="md-nav__link">
+      <a href="../../zh/proxy_issues/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    ❓ 常见问题
+    代理问题
     
   </span>
   
@@ -851,8 +582,6 @@
       
         
       
-        
-      
     
     
       
@@ -876,7 +605,7 @@
               
   
   <span class="md-ellipsis">
-    🇯🇵 日本語(ホーム)
+    日本語
     
   </span>
   
@@ -893,32 +622,10 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            🇯🇵 日本語(ホーム)
+            日本語
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ja/setup/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ⚙️ EAP-TLS の設定
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -932,7 +639,7 @@
         
   
   <span class="md-ellipsis">
-    🔐 Proxy の追加
+    プロキシ認証
     
   </span>
   
@@ -950,11 +657,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ja/faq/" class="md-nav__link">
+      <a href="../../ja/proxy_issues/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    ❓ よくある質問
+    プロキシの問題
     
   </span>
   

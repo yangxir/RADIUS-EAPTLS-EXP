@@ -336,6 +336,18 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    🏠 Home
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -346,6 +358,70 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Project Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiment-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠 Experiment Environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      📑 Sections
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Useful Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact-contributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📬 Contact &amp; Contributions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -739,7 +815,81 @@
 
 
 
-<h1 id="eap-tls-radius-experiments">EAP-TLS RADIUS Experiments<a class="headerlink" href="#eap-tls-radius-experiments" title="Permanent link">&para;</a></h1>
+<h1 id="eap-tls-radius-experiments">📡 EAP-TLS RADIUS Experiments<a class="headerlink" href="#eap-tls-radius-experiments" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>A complete guide to setting up FreeRADIUS with EAP-TLS authentication.</strong><br />
+Learn how to deploy a <strong>secure and scalable</strong> authentication system with FreeRADIUS.</p>
+</blockquote>
+<hr />
+<h2 id="project-overview">🚀 Project Overview<a class="headerlink" href="#project-overview" title="Permanent link">&para;</a></h2>
+<p>This project provides a <strong>step-by-step guide</strong> on setting up <strong>EAP-TLS authentication</strong> in FreeRADIUS, including:
+- ✅ <strong>Installing FreeRADIUS</strong>
+- 🔑 <strong>Generating EAP-TLS Certificates</strong>
+- ⚙️ <strong>Configuring the RADIUS Server</strong>
+- 📡 <strong>Connecting Wireless Clients</strong>
+- 🛠 <strong>Debugging and Troubleshooting</strong></p>
+<blockquote>
+<p>📢 <strong>Multilingual Support:</strong> Available in <strong>English, 中文, 日本語</strong><br />
+🌍 <strong>Switch languages using the navigation bar at the top.</strong></p>
+</blockquote>
+<hr />
+<h2 id="experiment-environment">🛠 Experiment Environment<a class="headerlink" href="#experiment-environment" title="Permanent link">&para;</a></h2>
+<p>To follow this guide, you will need:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🖥️ <strong>Ubuntu VM</strong></td>
+<td>RADIUS server environment</td>
+</tr>
+<tr>
+<td>📡 <strong>Router</strong></td>
+<td>Wireless access point (AP)</td>
+</tr>
+<tr>
+<td>📱 <strong>Redmi K50</strong></td>
+<td>Wireless client for authentication</td>
+</tr>
+<tr>
+<td>🧩 <strong>Wi-Fi Adapter</strong></td>
+<td>For debugging and packet capture</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>Ensure your router supports WPA2-Enterprise with EAP-TLS authentication.</strong></p>
+</blockquote>
+<hr />
+<h2 id="sections">📑 Sections<a class="headerlink" href="#sections" title="Permanent link">&para;</a></h2>
+<p>📌 <strong>Getting Started</strong>
+- <a href="en/setup/">Installation &amp; Setup</a> – Set up FreeRADIUS and configure EAP-TLS.
+- <a href="en/setup/#3-generating-certificates">Generating Certificates</a> – Secure authentication with TLS.</p>
+<p>📌 <strong>Advanced Configuration</strong>
+- <a href="en/proxy/">Adding a Proxy</a> – Multi-proxy setup for distributed authentication.
+- <a href="en/faq/">Debugging</a> – Common issues and solutions.</p>
+<p>📌 <strong>Language Selection</strong>
+- 🇬🇧 <strong><a href="en/setup/">English</a></strong>
+- 🇨🇳 <strong><a href="zh/setup/">中文</a></strong>
+- 🇯🇵 <strong><a href="ja/setup/">日本語</a></strong></p>
+<hr />
+<h2 id="useful-resources">🔗 Useful Resources<a class="headerlink" href="#useful-resources" title="Permanent link">&para;</a></h2>
+<p>📌 <strong>FreeRADIUS Official Docs</strong><br />
+🔗 <a href="https://freeradius.org/">FreeRADIUS.org</a></p>
+<p>📌 <strong>Certificate Authority &amp; Security</strong><br />
+🔗 <a href="https://letsencrypt.org/">Let's Encrypt</a></p>
+<p>📌 <strong>Project GitHub Repository</strong><br />
+🔗 <a href="https://github.com/yangxir/RADIUS-EAPTLS-EXP">yangxir/RADIUS-EAPTLS-EXP</a></p>
+<hr />
+<h2 id="contact-contributions">📬 Contact &amp; Contributions<a class="headerlink" href="#contact-contributions" title="Permanent link">&para;</a></h2>
+<p>💬 Found an issue or have a suggestion?<br />
+Open an <a href="https://github.com/yangxir/RADIUS-EAPTLS-EXP/issues">Issue</a> or submit a Pull Request!  </p>
+<p>📢 If this project helps you, consider giving it a ⭐ on GitHub!</p>
+<hr />
 
 
 

@@ -1,0 +1,40 @@
+site_name: "EAP-TLS RADIUS Experiments"
+theme:
+  name: "material"
+  language: "en"
+  features:
+    - navigation.tabs
+    - navigation.expand
+    - search.suggest
+
+nav:
+  - Home: index.md
+  - English:
+      - Setup: en/setup.md
+      - Proxy Authentication: en/proxy.md
+      - FAQ: en/faq.md
+  - 中文:
+      - 设置 EAP-TLS: zh/setup.md
+      - 添加 Proxy: zh/proxy.md
+      - 常见问题: zh/faq.md
+  - 日本語:
+      - EAP-TLS の設定: ja/setup.md
+      - Proxy の追加: ja/proxy.md
+      - よくある質問: ja/faq.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yangxir
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.extra
+  - pymdownx.emoji
+  - pymdownx.tasklist
+
+plugins:
+  - search

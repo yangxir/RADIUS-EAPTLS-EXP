@@ -617,7 +617,7 @@
           <li class="md-nav__item">
   <a href="#42-run-eap-tls-authentication" class="md-nav__link">
     <span class="md-ellipsis">
-      �� 4.2 Run EAP-TLS Authentication
+      📌 4.2 Run EAP-TLS Authentication
     </span>
   </a>
   
@@ -629,29 +629,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-common-issues-and-solutions" class="md-nav__link">
+  <a href="#5-issues-and-solutions" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ 5. Common Issues and Solutions
+      ✅ 5. Issues and Solutions
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="✅ 5. Common Issues and Solutions">
+    <nav class="md-nav" aria-label="✅ 5. Issues and Solutions">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-proxy-server-does-not-forward-requests-correctly" class="md-nav__link">
+  <a href="#1-proxy-server-did-not-forward-requests-correctly" class="md-nav__link">
     <span class="md-ellipsis">
-      🔴 1. Proxy Server Does Not Forward Requests Correctly
+      🔴 1. Proxy Server Did Not Forward Requests Correctly
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔴 1. Proxy Server Does Not Forward Requests Correctly">
+    <nav class="md-nav" aria-label="🔴 1. Proxy Server Did Not Forward Requests Correctly">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#symptoms" class="md-nav__link">
+  <a href="#issue" class="md-nav__link">
     <span class="md-ellipsis">
-      ❌ Symptoms
+      ❌ Issue
     </span>
   </a>
   
@@ -659,6 +659,39 @@
         
           <li class="md-nav__item">
   <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Solution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-certificate-chain-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔴 2. Certificate Chain Error
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔴 2. Certificate Chain Error">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Issue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solution_1" class="md-nav__link">
     <span class="md-ellipsis">
       ✅ Solution
     </span>
@@ -1125,37 +1158,61 @@ View logs:
 <span class="w">    </span><span class="na">private_key_passwd</span><span class="o">=</span><span class="s">&quot;&quot;</span>
 <span class="na">}</span>
 </code></pre></div></p>
-<h3 id="42-run-eap-tls-authentication">�� 4.2 Run EAP-TLS Authentication<a class="headerlink" href="#42-run-eap-tls-authentication" title="Permanent link">&para;</a></h3>
+<h3 id="42-run-eap-tls-authentication">📌 4.2 Run EAP-TLS Authentication<a class="headerlink" href="#42-run-eap-tls-authentication" title="Permanent link">&para;</a></h3>
 <p><div class="highlight"><pre><span></span><code>eapol_test<span class="w"> </span>-c<span class="w"> </span>~/eapol_test.conf<span class="w"> </span>-s<span class="w"> </span>shared_secret_key<span class="w"> </span>-a<span class="w"> </span><span class="m">192</span>.168.8.182<span class="w"> </span>-p<span class="w"> </span><span class="m">1812</span>
 </code></pre></div>
 ✅ <strong>Proxy Server forwards the request to RADIUS Server, completing authentication</strong></p>
-<hr />
-<h2 id="5-common-issues-and-solutions">✅ 5. Common Issues and Solutions<a class="headerlink" href="#5-common-issues-and-solutions" title="Permanent link">&para;</a></h2>
-<h3 id="1-proxy-server-does-not-forward-requests-correctly">🔴 1. Proxy Server Does Not Forward Requests Correctly<a class="headerlink" href="#1-proxy-server-does-not-forward-requests-correctly" title="Permanent link">&para;</a></h3>
-<h4 id="symptoms">❌ Symptoms<a class="headerlink" href="#symptoms" title="Permanent link">&para;</a></h4>
+<h2 id="5-issues-and-solutions">✅ <strong>5. Issues and Solutions</strong><a class="headerlink" href="#5-issues-and-solutions" title="Permanent link">&para;</a></h2>
+<h3 id="1-proxy-server-did-not-forward-requests-correctly">🔴 <strong>1. Proxy Server Did Not Forward Requests Correctly</strong><a class="headerlink" href="#1-proxy-server-did-not-forward-requests-correctly" title="Permanent link">&para;</a></h3>
+<h4 id="issue">❌ <strong>Issue</strong><a class="headerlink" href="#issue" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Proxy Server <strong>does not forward EAP-TLS authentication requests</strong> but handles authentication <strong>locally</strong>.</li>
-<li><code>radiusd -X</code> logs do not show <strong>forwarded authentication requests</strong>.</li>
+<li>The Proxy Server <strong>did not forward the EAP-TLS authentication request</strong> but <strong>handled authentication locally</strong> instead.</li>
+<li>No <strong>authentication request forwarding</strong> was found in the <code>radiusd -X</code> logs.</li>
 </ul>
-<h4 id="solution">✅ Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h4>
+<h4 id="solution">✅ <strong>Solution</strong><a class="headerlink" href="#solution" title="Permanent link">&para;</a></h4>
 <ol>
 <li><strong>Enable proxy forwarding</strong>
    <div class="highlight"><pre><span></span><code><span class="na">proxy_requests</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
 </code></pre></div></li>
-<li><strong>Ensure <code>proxy.conf</code> realm configuration is correct</strong>
+<li><strong>Ensure <code>realm</code> configuration in <code>proxy.conf</code> is correct</strong>
    <div class="highlight"><pre><span></span><code><span class="na">realm DEFAULT {</span>
 <span class="w">    </span><span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">radius</span>
 <span class="w">    </span><span class="na">authhost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">192.168.8.195:1812</span>
 <span class="w">    </span><span class="na">accthost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">192.168.8.195:1813</span>
 <span class="w">    </span><span class="na">secret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">shared_secret_key</span>
+<span class="w">    </span><span class="na">auth_pool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">my_auth_failover</span><span class="w">  </span><span class="c1"># Replace with your own configuration</span>
 <span class="na">}</span>
 </code></pre></div></li>
 <li><strong>Restart FreeRADIUS</strong>
    <div class="highlight"><pre><span></span><code>systemctl<span class="w"> </span>restart<span class="w"> </span>freeradius
 </code></pre></div>
-✅ <strong>Successfully forwards EAP-TLS authentication requests to RADIUS Server!</strong> 🎉</li>
+✅ <strong>Successfully forwarded EAP-TLS authentication requests to the RADIUS Server!</strong> 🎉</li>
 </ol>
 <hr />
+<h3 id="2-certificate-chain-error">🔴 <strong>2. Certificate Chain Error</strong><a class="headerlink" href="#2-certificate-chain-error" title="Permanent link">&para;</a></h3>
+<h4 id="issue_1">❌ <strong>Issue</strong><a class="headerlink" href="#issue_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>eapol_test</code> authentication failed, with logs showing:
+  <div class="highlight"><pre><span></span><code>Certificate chain - 1 cert(s) untrusted
+</code></pre></div></li>
+<li>RADIUS Server logs showed:
+  <div class="highlight"><pre><span></span><code>TLS Alert read: warning: unknown CA
+</code></pre></div></li>
+</ul>
+<h4 id="solution_1">✅ <strong>Solution</strong><a class="headerlink" href="#solution_1" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>Ensure <code>eap.conf</code> on the RADIUS Server is configured correctly</strong>
+   <div class="highlight"><pre><span></span><code><span class="na">tls-config tls-common {</span>
+<span class="w">    </span><span class="na">private_key_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/etc/freeradius/3.0/certs/server.key</span>
+<span class="w">    </span><span class="na">certificate_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/etc/freeradius/3.0/certs/server.pem</span>
+<span class="w">    </span><span class="na">ca_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/etc/freeradius/3.0/certs/ca.pem</span>
+<span class="na">}</span>
+</code></pre></div></li>
+<li><strong>Import the CA certificate on the client</strong>
+   <div class="highlight"><pre><span></span><code>scp<span class="w"> </span>root@192.168.8.195:/etc/freeradius/3.0/certs/ca.crt<span class="w"> </span>~/Desktop/
+</code></pre></div>
+✅ <strong>Certificates successfully matched, authentication passed!</strong> 🎉</li>
+</ol>
 <h2 id="6-future-optimization-directions">📌 6. Future Optimization Directions<a class="headerlink" href="#6-future-optimization-directions" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>🌍 Multi-level Proxy Authentication Testing</strong>: Attempt secondary forwarding of authentication requests</li>

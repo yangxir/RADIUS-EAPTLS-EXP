@@ -905,6 +905,87 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 5. 発生した問題と解決策
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ 5. 発生した問題と解決策">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔴 1. プロキシサーバーがリクエストを正しく転送しない
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔴 1. プロキシサーバーがリクエストを正しく転送しない">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ 問題
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 解決策
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔴 2. 証明書チェーンのエラー
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔴 2. 証明書チェーンのエラー">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ 問題
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 解決策
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#6" class="md-nav__link">
     <span class="md-ellipsis">
       📌 6. 今後の最適化の方向性
@@ -914,7 +995,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       📌 参考資料
     </span>
@@ -1081,7 +1162,57 @@
 <p><div class="highlight"><pre><span></span><code>eapol_test<span class="w"> </span>-c<span class="w"> </span>~/eapol_test.conf<span class="w"> </span>-s<span class="w"> </span>shared_secret_key<span class="w"> </span>-a<span class="w"> </span><span class="m">192</span>.168.8.182<span class="w"> </span>-p<span class="w"> </span><span class="m">1812</span>
 </code></pre></div>
 ✅ <strong>プロキシサーバーが要求を RADIUS サーバーに転送し、認証成功</strong></p>
+<h2 id="5">✅ <strong>5. 発生した問題と解決策</strong><a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<h3 id="1_1">🔴 <strong>1. プロキシサーバーがリクエストを正しく転送しない</strong><a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
+<h4 id="_2">❌ <strong>問題</strong><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Proxy Server が <strong>EAP-TLS 認証リクエストを正しく転送せず、ローカルで処理してしまう</strong>。</li>
+<li><code>radiusd -X</code> ログに <strong>認証リクエストの転送記録がない</strong>。</li>
+</ul>
+<h4 id="_3">✅ <strong>解決策</strong><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>プロキシ転送を有効にする</strong>
+   <div class="highlight"><pre><span></span><code><span class="na">proxy_requests</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
+</code></pre></div></li>
+<li><strong><code>proxy.conf</code> の <code>realm</code> 設定が正しいことを確認</strong>
+   <div class="highlight"><pre><span></span><code><span class="na">realm DEFAULT {</span>
+<span class="w">    </span><span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">radius</span>
+<span class="w">    </span><span class="na">authhost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">192.168.8.195:1812</span>
+<span class="w">    </span><span class="na">accthost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">192.168.8.195:1813</span>
+<span class="w">    </span><span class="na">secret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">shared_secret_key</span>
+<span class="w">    </span><span class="na">auth_pool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">my_auth_failover</span><span class="w">  </span><span class="c1"># 自分の設定に変更してください</span>
+<span class="na">}</span>
+</code></pre></div></li>
+<li><strong>FreeRADIUS を再起動</strong>
+   <div class="highlight"><pre><span></span><code>systemctl<span class="w"> </span>restart<span class="w"> </span>freeradius
+</code></pre></div>
+✅ <strong>EAP-TLS 認証リクエストの転送に成功しました！</strong> 🎉</li>
+</ol>
 <hr />
+<h3 id="2_1">🔴 <strong>2. 証明書チェーンのエラー</strong><a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h3>
+<h4 id="_4">❌ <strong>問題</strong><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>eapol_test</code> の認証に失敗し、ログに以下のように表示される：
+  <div class="highlight"><pre><span></span><code>Certificate chain - 1 cert(s) untrusted
+</code></pre></div></li>
+<li>RADIUS サーバーのログ：
+  <div class="highlight"><pre><span></span><code>TLS Alert read: warning: unknown CA
+</code></pre></div></li>
+</ul>
+<h4 id="_5">✅ <strong>解決策</strong><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>RADIUS サーバーの <code>eap.conf</code> 設定が正しいことを確認</strong>
+   <div class="highlight"><pre><span></span><code><span class="na">tls-config tls-common {</span>
+<span class="w">    </span><span class="na">private_key_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/etc/freeradius/3.0/certs/server.key</span>
+<span class="w">    </span><span class="na">certificate_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/etc/freeradius/3.0/certs/server.pem</span>
+<span class="w">    </span><span class="na">ca_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/etc/freeradius/3.0/certs/ca.pem</span>
+<span class="na">}</span>
+</code></pre></div></li>
+<li><strong>クライアントに CA 証明書をインポート</strong>
+   <div class="highlight"><pre><span></span><code>scp<span class="w"> </span>root@192.168.8.195:/etc/freeradius/3.0/certs/ca.crt<span class="w"> </span>~/Desktop/
+</code></pre></div>
+✅ <strong>証明書が正しく一致し、認証が成功しました！</strong> 🎉</li>
+</ol>
 <h2 id="6">📌 6. 今後の最適化の方向性<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>🌍 多段階プロキシ認証テスト</strong>: 認証要求の二次転送を試す</li>
@@ -1089,7 +1220,7 @@
 <li><strong>🔐 証明書管理の最適化</strong>: クライアント証明書のインポートプロセスを簡素化し、RADIUS CA の信頼を自動化</li>
 </ul>
 <hr />
-<h2 id="_2">📌 参考資料<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_6">📌 参考資料<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li>📖 <strong>FreeRADIUS 公式ドキュメント</strong>: <a href="https://freeradius.org/">https://freeradius.org/</a></li>
 <li>📖 <strong>Eduroam 認証ガイド</strong>: <a href="https://meatwiki.nii.ac.jp/confluence/pages/viewpage.action?pageId=94340973">NII MeatWiki</a></li>

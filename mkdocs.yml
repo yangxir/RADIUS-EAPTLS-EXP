@@ -55,6 +55,8 @@ plugins:
   - minify:
       minify_html: true
 
-site_dir: docs  # 让 MkDocs 构建输出到 docs 目录
+site_name: RADIUS EAP-TLS 实验记录
+docs_dir: docs  # 确保文档存放在 docs/
+site_dir: site  # 生成的站点文件存放在 site/
 
 use_directory_urls: false  # 重要，防止 URL 解析错误

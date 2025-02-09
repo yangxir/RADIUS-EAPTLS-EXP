@@ -14,12 +14,14 @@ theme:
     scheme: slate
 
 nav:
-  - 首页: index.md
-  - 实验记录:
-      - 第一阶段：EAP-TLS 认证: setup/eap-tls.md
-      - 第二阶段：Proxy 服务器: setup/proxy.md
-  - 常见问题: faq.md
-  - 关于: about.md
+  - 首页: index.md  # 主页
+  - 中文:
+      - 首页: zh/index.md
+      - 实验记录:
+          - 第一阶段：EAP-TLS 认证: zh/setup/eap-tls.md
+          - 第二阶段：Proxy 服务器: zh/setup/proxy.md
+      - 常见问题: zh/faq.md
+      - 关于: zh/about.md
 
   - English:
       - Home: en/index.md
@@ -37,12 +39,22 @@ nav:
 
 extra:
   alternate:
+    - name: 中文
+      link: /RADIUS-EAPTLS-EXP/zh/
+      lang: zh
     - name: English
-      link: en/
+      link: /RADIUS-EAPTLS-EXP/en/
       lang: en
     - name: 日本語
-      link: jp/
+      link: /RADIUS-EAPTLS-EXP/jp/
       lang: ja
 
-use_directory_urls: false  # 重要，防止 URL 解析错误
+plugins:
+  - search
+  - git-revision-date-localized
+  - minify:
+      minify_html: true
 
+site_dir: docs  # 让 MkDocs 构建输出到 docs 目录
+
+use_directory_urls: false  # 重要，防止 URL 解析错误

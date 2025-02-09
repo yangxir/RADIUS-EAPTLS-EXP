@@ -5,15 +5,11 @@
          <lastmod>2025-02-09</lastmod>
     </url>
     <url>
-         <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/about.html</loc>
-         <lastmod>2025-02-09</lastmod>
-    </url>
-    <url>
-         <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/faq.html</loc>
-         <lastmod>2025-02-09</lastmod>
-    </url>
-    <url>
          <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/en/index.html</loc>
+         <lastmod>2025-02-09</lastmod>
+    </url>
+    <url>
+         <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/en/faq.html</loc>
          <lastmod>2025-02-09</lastmod>
     </url>
     <url>
@@ -21,7 +17,23 @@
          <lastmod>2025-02-09</lastmod>
     </url>
     <url>
+         <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/en/setup/experiment3.html</loc>
+         <lastmod>2025-02-09</lastmod>
+    </url>
+    <url>
+         <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/en/setup/experiment4.html</loc>
+         <lastmod>2025-02-09</lastmod>
+    </url>
+    <url>
+         <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/en/setup/experiment5.html</loc>
+         <lastmod>2025-02-09</lastmod>
+    </url>
+    <url>
          <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/jp/index.html</loc>
+         <lastmod>2025-02-09</lastmod>
+    </url>
+    <url>
+         <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/jp/faq.html</loc>
          <lastmod>2025-02-09</lastmod>
     </url>
     <url>
@@ -29,23 +41,51 @@
          <lastmod>2025-02-09</lastmod>
     </url>
     <url>
-         <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/setup/eap-tls.html</loc>
+         <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/jp/setup/experiment3.html</loc>
          <lastmod>2025-02-09</lastmod>
     </url>
     <url>
-         <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/setup/eaptls.html</loc>
+         <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/jp/setup/experiment4.html</loc>
          <lastmod>2025-02-09</lastmod>
     </url>
     <url>
-         <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/setup/experiment3.html</loc>
+         <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/jp/setup/experiment5.html</loc>
          <lastmod>2025-02-09</lastmod>
     </url>
     <url>
-         <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/setup/experiment4.html</loc>
+         <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/zh/index.html</loc>
          <lastmod>2025-02-09</lastmod>
     </url>
     <url>
-         <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/setup/proxy.html</loc>
+         <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/zh/about.html</loc>
+         <lastmod>2025-02-09</lastmod>
+    </url>
+    <url>
+         <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/zh/faq.html</loc>
+         <lastmod>2025-02-09</lastmod>
+    </url>
+    <url>
+         <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/zh/setup/eap-tls.html</loc>
+         <lastmod>2025-02-09</lastmod>
+    </url>
+    <url>
+         <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/zh/setup/eaptls.html</loc>
+         <lastmod>2025-02-09</lastmod>
+    </url>
+    <url>
+         <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/zh/setup/experiment3.html</loc>
+         <lastmod>2025-02-09</lastmod>
+    </url>
+    <url>
+         <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/zh/setup/experiment4.html</loc>
+         <lastmod>2025-02-09</lastmod>
+    </url>
+    <url>
+         <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/zh/setup/experiment5.html</loc>
+         <lastmod>2025-02-09</lastmod>
+    </url>
+    <url>
+         <loc>https://yangxir.github.io/RADIUS-EAPTLS-EXP/zh/setup/proxy.html</loc>
          <lastmod>2025-02-09</lastmod>
     </url>
 </urlset>

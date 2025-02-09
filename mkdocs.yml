@@ -1,36 +1,48 @@
 site_name: RADIUS EAP-TLS 实验记录
-repo_url: https://github.com/yangxir/RADIUS-EAPTLS-EXP
 site_url: https://yangxir.github.io/RADIUS-EAPTLS-EXP/
+repo_url: https://github.com/yangxir/RADIUS-EAPTLS-EXP
 
 theme:
   name: material
   language: zh
   features:
-    - navigation.tabs
     - navigation.instant
+    - navigation.tabs
     - search.highlight
-    - content.tabs.link
-    - navigation.expand
     - content.code.copy
+  palette:
+    scheme: slate
 
 nav:
   - 首页: index.md
   - 实验记录:
-      - 第一阶段: setup/eaptls.md
-      - 第二阶段: setup/proxy.md
-      - 第三阶段 (待添加): setup/experiment3.md
-      - 第四阶段 (待添加): setup/experiment4.md
+      - 第一阶段：EAP-TLS 认证: setup/eap-tls.md
+      - 第二阶段：Proxy 服务器: setup/proxy.md
   - 常见问题: faq.md
   - 关于: about.md
 
+  - English:
+      - Home: en/index.md
+      - Experiment Logs:
+          - Phase 1:Setting up EAP-TLS authentication: en/setup/eap-tls.md
+      - FAQ: en/faq.md
+      - About: en/about.md
 
+  - 日本語:
+      - ホーム: jp/index.md
+      - 実験記録:
+          - 第1段階:EAP-TLS 認証のセットアップ: jp/setup/eap-tls.md
+      - よくある質問: jp/faq.md
+      - について: jp/about.md
 
 extra:
   alternate:
     - name: English
-      link: /en/
+      link: en/
       lang: en
     - name: 日本語
-      link: /jp/
+      link: jp/
       lang: ja
-site_name: My Docs
+
+use_directory_urls: false  # 重要，防止 URL 解析错误
+

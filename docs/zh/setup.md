@@ -75,7 +75,7 @@ tls-config tls-common {
 
 ---
 
-## �� 3. 生成证书
+## 📌 3. 生成证书
 创建证书目录（如果不存在）：
 ```sh
 sudo mkdir -p /etc/freeradius/3.0/certs

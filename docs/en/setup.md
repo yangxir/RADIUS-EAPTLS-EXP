@@ -113,7 +113,7 @@ sudo openssl pkcs12 -export -inkey client.key -in client.crt -certfile ca.crt -o
 
 ---
 
-## �� 4. Start FreeRADIUS and Test
+## 📌 4. Start FreeRADIUS and Test
 ```sh
 sudo systemctl restart freeradius
 sudo journalctl -u freeradius -f

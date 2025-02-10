@@ -1,31 +1,57 @@
-site_name: "EAP-TLS RADIUS Experiments"
+# 📡 EAP-TLS RADIUS Experiments - MkDocs Configuration
+site_name: "📡 EAP-TLS RADIUS Experiments"
+site_description: "A comprehensive guide for setting up EAP-TLS authentication with FreeRADIUS"
+site_author: "yangxir"
+repo_url: "https://github.com/yangxir/RADIUS-EAPTLS-EXP"
+edit_uri: ""
+
 theme:
   name: "material"
   language: "en"
   features:
-    - navigation.tabs
-    - navigation.expand
-    - search.suggest
+    - navigation.tabs           # 语言切换变为选项卡
+    - navigation.collapsible    # 让侧边栏支持折叠（重要）
+    - navigation.expand         # 默认仅展开当前页面的目录
+    - navigation.path           # 在标题显示当前位置
+    - navigation.indexes        # 允许 index.md 作为目录页
+    - navigation.top             # ✅ 固定顶部导航栏
+    - toc.integrate             # 让右侧目录浮动固定
+    - search.suggest            # 搜索时提供智能建议
+    - search.highlight          # 搜索后高亮匹配内容
+    - content.code.copy         # 代码块支持 "一键复制"
+    - content.code.annotate     # 代码行支持注释
+    - content.tabs.link         # 代码块的 Tab 选项可以切换
+  palette:
+    scheme: "slate"             # 现代深色主题（你可以改成 light）
+    primary: "blue grey"
+    accent: "cyan"
+
 
 nav:
-  - Home: index.md
-  - English:
-      - Setup: en/setup.md
-      - Proxy Authentication: en/proxy.md
-      - FAQ: en/faq.md
-  - 中文:
-      - 设置 EAP-TLS: zh/setup.md
-      - 添加 Proxy: zh/proxy.md
-      - 常见问题: zh/faq.md
-  - 日本語:
-      - EAP-TLS の設定: ja/setup.md
-      - Proxy の追加: ja/proxy.md
-      - よくある質問: ja/faq.md
+  - 🏠 Home: index.md
+  - 🌍 English (home):
+      - 📝 Home: en/index.md
+      - ⚙️ Setup: en/setup.md
+      - 🔐 Proxy Authentication: en/proxy_issues.md 
+      - ❓ FAQ: en/faq.md
+  - 🇨🇳 中文 (主页):
+      - 📝 主页: zh/index.md
+      - ⚙️ 设置 EAP-TLS: zh/setup.md
+      - 🔐 添加 Proxy: zh/proxy_issues.md  
+      - ❓ 常见问题: zh/faq.md
+  - 🇯🇵 日本語 (ホーム):
+      - 📝 ホーム: ja/index.md
+      - ⚙️ EAP-TLS の設定: ja/setup.md
+      - 🔐 Proxy の追加: ja/proxy_issues.md
+      - ❓ よくある質問: ja/faq.md
 
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/yangxir
+      link: "https://github.com/yangxir"
+  generator: false  # 🔹 去掉底部 "Powered by MkDocs"
+
+  copyright: "© 2025 yangxir | EAP-TLS RADIUS Experiments | Hosted on GitHub Pages"
 
 markdown_extensions:
   - toc:
@@ -33,8 +59,16 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
   - pymdownx.extra
-  - pymdownx.emoji
-  - pymdownx.tasklist
+  - pymdownx.emoji             # 🔹 Emoji 支持
+  - pymdownx.tasklist          # 🔹 任务列表支持
+  - pymdownx.tabbed            # 🔹 代码块 Tab 切换
+  - pymdownx.details           # 🔹 可折叠块
+  - pymdownx.caret             # 🔹 上标
+  - pymdownx.mark              # 🔹 高亮
+  - pymdownx.tilde             # 🔹 下标
+  - pymdownx.arithmatex:
+      generic: true            # 🔹 数学公式支持
+  - pymdownx.snippets          # 🔹 允许使用 Markdown 片段
 
 plugins:
   - search
